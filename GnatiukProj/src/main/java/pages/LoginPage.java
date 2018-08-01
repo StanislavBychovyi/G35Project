@@ -59,4 +59,16 @@ public class LoginPage extends ParentPage {
             Assert.fail("Cannot work with element");
         }
     }
+
+    public boolean isLoginPageDisplayed () {
+        try {
+            webDriver.get(baseUrl + "/login");
+            checkCurrentUrl();
+            return true;
+        } catch (Exception e) {
+            return false;
+
+        }
+
+    }
 }
